@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> JS assignment 9</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+  
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+
+
+</head>
+<body>
+    <div class="mt-5 container">
+        <div  class="text-center mb-5  border-bottom border-2 border-dark dotted-border">
+            <h1 class="mb-5"> Bookmarker </h1>
+        </div>
+        <div class="text-center d-flex justify-content-center align-items-center title">
+            <i class="fa-solid fa-bookmark fa-xl pb-2"></i>
+            <h2 class="ps-2 pe-2"> Bookmark your favorite sites </h2>
+            <i class="fa-solid fa-bookmark fa-xl pb-2"></i>
+        </div>
+        <form class="border-bottom border-2 border-dark dotted-border pb-4">
+            <div class="mb-3">
+              <label for="siteNameId" class="form-label"><i class="fa-solid fa-book"></i> Site Name</label>
+              <input type="text" class="form-control" id="siteNameId" placeholder="Bookmark Name" oninput="validate(siteNameRegex,siteNameId)">
+            </div>
+            <div class="mb-3">
+                <label for="siteUrlId" class="form-label"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input type="text" class="form-control" id="siteUrlId" placeholder="Website URL" oninput="validate(siteUrlRegex, siteUrlId)">
+            </div>
+            <div class="text-center">
+                <button class="my-btn" onclick="addBookmark()" type="button">Submit</button>
+            </div>
+        </form>
+        <table class="table text-center mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+            
+        </table>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
